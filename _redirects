@@ -1,7 +1,7 @@
-/                /src/pages/index.html           200
-/profil          /src/pages/about.html           200
-/jurusan         /src/pages/jurusan.html         200
-/fasilitas       /src/pages/fasilitas.html       200
-/ekstrakurikuler /src/pages/ekstrakurikuler.html 200
-/kontak          /src/pages/contact.html         200
-/*               /src/pages/index.html           200
+/                /pages/index.html           200
+/profil          /pages/about.html           200
+/jurusan         /pages/jurusan.html         200
+/fasilitas       /pages/fasilitas.html       200
+/ekstrakurikuler /pages/ekstrakurikuler.html 200
+/kontak          /pages/contact.html         200
+/*               /pages/index.html           200
