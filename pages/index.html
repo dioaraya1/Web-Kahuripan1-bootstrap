@@ -192,108 +192,102 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section
+      id="hero"
+      class="position-relative overflow-hidden"
+    >
       <div
         id="heroCarousel"
-        class="carousel slide"
+        class="carousel slide carousel-fade"
         data-bs-ride="carousel"
         data-bs-interval="5000"
       >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-
+        <!-- carousel item -->
         <div class="carousel-inner">
+          <!-- slide 1 -->
           <div class="carousel-item active">
             <img
               src="../assets/image/banner1.jpg"
-              class="d-block w-100"
-              alt="Praktek Permesinan"
+              class="d-block w-100 hero-img"
+              alt=""
             />
-            <div
-              class="carousel-caption d-none d-md-block caption-bottom-left text-start"
-            >
-              <h5>Praktek Permesinan Modern</h5>
-              <p>
-                Fasilitas bengkel lengkap untuk pengembangan keterampilan
-                teknik.
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption text-start animate-slide">
+              <h1 class="fw-bold display-5 fade-up">
+                Praktek Permesinan Modern
+              </h1>
+              <p class="lead mb-4 fade-up delay-1">
+                Fasilitas lengkap untuk mengasah keterampilan teknik dan inovasi
+                siswa.
               </p>
+              <a
+                href="#fasilitas"
+                class="btn btn-light btn-lg rounded-pill px-4 shadow-sm fade-up delay-2"
+                >Lihat Fasilitas</a
+              >
             </div>
           </div>
-
+          <!-- slide 2 -->
           <div class="carousel-item">
             <img
               src="../assets/image/banner2.jpg"
-              class="d-block w-100"
-              alt="Kegiatan Siswa"
+              class="d-block w-100 hero-img"
+              alt=""
             />
-            <div
-              class="carousel-caption d-none d-md-block caption-bottom-left text-start"
-            >
-              <h5>Kegiatan Siswa Aktif</h5>
-              <p>
-                Osis dan klub teknis untuk pengembangan soft-skill dan
-                leadership.
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption text-start animate-slide">
+              <h1 class="fw-bold display-5 fade-up">Kegiatan Siswa Aktif</h1>
+              <p class="lead mb-4 fade-up delay-1">
+                OSIS dan klub teknis membangun kepemimpinan dan kreativitas.
               </p>
+              <a
+                href="#ekstrakurikuler"
+                class="btn btn-light btn-lg rounded-pill px-4 shadow-sm fade-up delay-2"
+                >Jelajahi Kegiatan</a
+              >
             </div>
           </div>
-
+          <!-- Slide 3 -->
           <div class="carousel-item">
             <img
               src="../assets/image/banner3.jpg"
-              class="d-block w-100"
+              class="d-block w-100 hero-img"
               alt="Kolaborasi Industri"
             />
-            <div
-              class="carousel-caption d-none d-md-block caption-bottom-left text-start"
-            >
-              <h5>Kolaborasi dengan Industri</h5>
-              <p>Kerja sama magang untuk pengalaman kerja nyata.</p>
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption text-start animate-slide">
+              <h1 class="fw-bold display-5 fade-up">
+                Kolaborasi dengan Industri
+              </h1>
+              <p class="lead mb-4 fade-up delay-1">
+                Program magang dan kerja sama industri untuk pengalaman kerja
+                nyata.
+              </p>
+              <a
+                href="#about"
+                class="btn btn-light btn-lg rounded-pill px-4 shadow-sm fade-up delay-2"
+              >
+                Pelajari Lebih Lanjut
+              </a>
             </div>
           </div>
         </div>
+        <!-- Controls -->
         <button
           class="carousel-control-prev"
           type="button"
           data-bs-target="#heroCarousel"
           data-bs-slide="prev"
-          aria-label="Previous slide"
         >
-          <span
-            class="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
+          <span class="carousel-control-prev-icon"></span>
         </button>
         <button
           class="carousel-control-next"
           type="button"
           data-bs-target="#heroCarousel"
           data-bs-slide="next"
-          aria-label="Next slide"
         >
-          <span
-            class="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
+          <span class="carousel-control-next-icon"></span>
         </button>
       </div>
     </section>
@@ -652,51 +646,76 @@
     </section>
 
     <!-- agenda sekolah -->
-    <section>
-      <div class="container agenda-section">
-        <div>
-          <h3 class="agenda-name">Agenda</h3>
-          <h6 class="agenda-desc">
-            Agenda kegiatan dan aktifitas sesuai dengan kalender pendidikan
-          </h6>
-        </div>
-        <div class="d-flex flex-column flex-md-row gap-4 mt-4">
-          <!-- 1 -->
-          <div
-            class="card"
-            style="width: 18rem"
-          >
-            <div class="card-body d-flex gap-3 align-items-center gap-3">
-              <div><i class="bi bi-calendar-check calender-icon p-2"></i></div>
-              <div>
-                <h5 class="card-title agenda-border">
-                  Special title treatment
-                </h5>
+    <section
+      id="agenda"
+      class="agenda-section py-5 position-relative"
+    >
+      <div class="container">
+        <!-- tittle -->
+        <div class="text-center mb-5">
+          <h3 class="fw-bold agenda-title">Agenda Sekolah</h3>
 
-                <p class="card-text">12-10-2025</p>
+          <p class="text-body-secondary agenda-subtitle">
+            Kegiatan dan aktivitas terbaru sesuai dengan kalender pendidikan SMK
+            Kahuripan 1 Jakarta
+          </p>
+        </div>
+
+        <!-- agenda cards -->
+        <div class="row g-4 justify-content-center">
+          <!-- card 1 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="agenda-card shadow-sm">
+              <div class="agenda-icon">
+                <i class="bi bi-calendar-event"></i>
               </div>
+              <h5 class="mt-3 fw-semibold">Upacara Hari Pahlawan</h5>
+              <p class="text-body-secondary small mb-1">
+                <i class="bi bi-clock me-3"></i>10 November 2025
+              </p>
+              <p class="agenda-text">
+                Menghormati jasa pahlawan nasional melalui kegiatan upacara dan
+                lomba bertema perjuangan.
+              </p>
             </div>
           </div>
-          <!-- 2 -->
-          <div
-            class="card"
-            style="width: 18rem"
-          >
-            <div class="card-body d-flex gap-3 align-items-center gap-3">
-              <div><i class="bi bi-calendar-check calender-icon p-2"></i></div>
-              <div>
-                <h5 class="card-title agenda-border">
-                  Special title treatment
-                </h5>
 
-                <p class="card-text">12-10-2025</p>
+          <!-- Card 2 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="agenda-card shadow-sm">
+              <div class="agenda-icon">
+                <i class="bi bi-book"></i>
               </div>
+              <h5 class="mt-3 fw-semibold">Penilaian Akhir Semester Ganjil</h5>
+              <p class="text-muted small mb-1">
+                <i class="bi bi-clock me-1"></i> 2 - 13 Desember 2025
+              </p>
+              <p class="agenda-text">
+                Evaluasi hasil belajar siswa untuk menentukan kenaikan kelas
+                pada semester ganjil.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="agenda-card shadow-sm">
+              <div class="agenda-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h5 class="mt-3 fw-semibold">Kunjungan Industri</h5>
+              <p class="text-muted small mb-1">
+                <i class="bi bi-clock me-1"></i> 20 Januari 2026
+              </p>
+              <p class="agenda-text">
+                Kegiatan lapangan untuk mengenalkan dunia kerja dan industri
+                kepada siswa kelas XII.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- berita dan artikel -->
     <section
       id="berita"
