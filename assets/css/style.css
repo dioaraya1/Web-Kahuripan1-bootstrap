@@ -65,74 +65,120 @@ header {
 }
 
 /* Hero / Carousel */
-.hero {
-  position: relative;
-  height: var(--hero-height-desktop);
+/* HERO SECTION */
+#hero {
+  height: 100vh;
+  color: white;
   overflow: hidden;
-  color: #fff;
-  padding: 0;
+  position: relative;
 }
 
-/* subtle overlay so captions readable */
-.hero::before {
-  content: "";
+/* Gambar dengan efek parallax & fade */
+.hero-img {
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(65%);
+  transform: scale(1.05);
+  transition: transform 8s ease-in-out;
+}
+
+.carousel-item.active .hero-img {
+  transform: scale(1);
+}
+
+/* Overlay gradien lembut */
+.carousel-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    rgba(13, 110, 253, 0.07),
-    rgba(13, 110, 253, 0.02)
+    to bottom right,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.3)
   );
-  pointer-events: none;
   z-index: 1;
 }
 
-/* ensure carousel fills hero */
-.hero .carousel,
-.hero .carousel-inner,
-.hero .carousel-item {
-  height: 100%;
-}
-
-/* images cover area */
-.hero .carousel-item img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* caption bottom-left */
-.caption-bottom-left {
+/* Caption styling */
+.carousel-caption {
   position: absolute;
-  left: 1.8rem;
-  bottom: 1.8rem;
-  right: auto;
-  max-width: 60%;
-  padding: 0.65rem 0.9rem;
-  border-radius: 6px;
-  background: var(--caption-bg);
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
   z-index: 2;
-}
-.caption-bottom-left h5 {
-  margin: 0 0 0.25rem 0;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.8rem;
-}
-.caption-bottom-left p {
-  margin: 0;
-  color: #e9eef8;
-  font-size: 1.2rem;
+  max-width: 600px;
 }
 
-/* carousel controls visibility */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+/* Animasi teks: fade-up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease forwards;
 }
 
+.fade-up.delay-1 {
+  animation-delay: 0.4s;
+}
+
+.fade-up.delay-2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tombol dengan animasi glow */
+.carousel-caption .btn {
+  transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Parallax efek lembut */
+.carousel-item.active img {
+  animation: parallaxZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes parallaxZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 55%;
+    left: 6%;
+    max-width: 90%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
 /* Headmaster — simplified & modern styles */
 .headmaster-section {
   padding: 3rem 1rem;
@@ -219,7 +265,7 @@ header {
   font-size: 0.875rem;
 }
 
-/* jurusan */
+/* jurusan sekolah*/
 .hover-card {
   transition: all 0.3s ease;
 }
@@ -260,9 +306,105 @@ header {
   padding-bottom: 0.25rem;
 }
 
+/* agenda sekolah */
+.agenda-section {
+  background: linear-gradient(to right, #f8fafc, #fdfdfd);
+  overflow: hidden;
+}
+
+.agenda-title {
+  font-size: 2rem;
+  color: #1b1b1b;
+  position: relative;
+}
+
+.agenda-title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #007bff;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.agenda-subtitle {
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Card Style */
+.agenda-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.agenda-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
+}
+
+/* Ikon bulat */
+.agenda-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #007bff, #00b4d8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.25);
+}
+
+/* Text */
+.agenda-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Animasi saat muncul */
+.agenda-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpCard 1s ease forwards;
+}
+
+.agenda-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.agenda-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.agenda-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUpCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* berita dan artikel */
 .berita-wrapper {
   background: linear-gradient(180deg, #212529 0%, #1a1a1a 100%);
+}
+.agenda-title {
+  font-size: 2rem;
+  color: #1b1b1b;
+  position: relative;
 }
 
 .berita-card {
