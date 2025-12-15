@@ -1,0 +1,177 @@
+/* ============================================
+   VARIABLES CUSTOM
+   ============================================ */
+/* SMK Kahuripan Color Palette */
+:root {
+  /* Primary Colors */
+  --color-blue-dark: #1a5fb4;
+  --color-blue-light: #2d8cff;
+  --color-orange: #ff6b35;
+  --color-yellow: #ffc107;
+  --color-green: #28a745;
+
+  /* Neutral Colors */
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #e9ecef;
+  --color-gray-200: #dee2e6;
+  --color-gray-300: #ced4da;
+  --color-gray-400: #adb5bd;
+  --color-gray-500: #6c757d;
+  --color-gray-600: #495057;
+  --color-gray-700: #343a40;
+  --color-gray-800: #212529;
+  --color-gray-900: #121416;
+
+  /* Semantic Colors */
+  --color-primary: var(--color-blue-dark);
+  --color-secondary: var(--color-gray-600);
+  --color-success: var(--color-green);
+  --color-info: #17a2b8;
+  --color-warning: var(--color-yellow);
+  --color-danger: #dc3545;
+  --color-light: var(--color-gray-100);
+  --color-dark: var(--color-gray-800);
+
+  /* Typography */
+  --font-family-base: "Inter", "Segoe UI", Roboto, -apple-system, sans-serif;
+  --font-family-heading: "Poppins", var(--font-family-base);
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* Spacing */
+  --spacer: 1rem;
+  --spacer-2: calc(var(--spacer) * 1.5);
+  --spacer-3: calc(var(--spacer) * 2);
+  --spacer-4: calc(var(--spacer) * 3);
+  --spacer-5: calc(var(--spacer) * 4);
+
+  /* Border Radius */
+  --border-radius: 0.375rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 1rem;
+  --border-radius-2xl: 2rem;
+  --border-radius-pill: 50rem;
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+  --transition-fade: opacity 0.15s linear;
+  --transition-collapse: height 0.35s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.075);
+}
+/* Override Bootstrap variables */
+$primary: var(--color-primary);
+$secondary: var(--color-secondary);
+$success: var(--color-success);
+$info: var(--color-info);
+$warning: var(--color-warning);
+$danger: var(--color-danger);
+$light: var(--color-light);
+$dark: var(--color-dark);
+$font-family-sans-serif: var(--font-family-base);
+$headings-font-family: var(--font-family-heading);
+$border-radius: var(--border-radius);
+$border-radius-sm: var(--border-radius-sm);
+$border-radius-lg: var(--border-radius-lg);
+$border-radius-xl: var(--border-radius-xl);
+$border-radius-2xl: var(--border-radius-2xl);
+$border-radius-pill: var(--border-radius-pill);
+$spacer: var(--spacer);
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
+);
+/* ============================================
+   BOOTSTRAP CORE - IMPORT HANYA YANG DIPAKAI
+   ============================================ */
+/* Core functions & variables */
+/* @import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities"; */
+/* Custom variables override */
+:root {
+  --bs-primary: #1a5fb4;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+
+  /* SMK Kahuripan colors */
+  --smk-blue: #1a5fb4;
+  --smk-orange: #ff6b35;
+  --smk-yellow: #ffc107;
+
+  /* Custom spacing */
+  --section-py: 5rem;
+  --card-spacing: 1.5rem;
+}
+/* Override Bootstrap variables */
+$primary: var(--smk-blue);
+$font-family-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+/* ============================================
+   BOOTSTRAP COMPONENTS YANG DIPAKAI
+   ============================================ */
+/* Layout & Content */
+/* Components */
+/* Forms */
+/* Helpers & Utilities */
+/* ============================================
+   CUSTOM COMPONENTS
+   ============================================ */
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+body {
+  font-family: var(--bs-font-sans-serif);
+  color: #212529;
+  line-height: 1.6;
+}
+.section-title {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #1a5fb4;
+    border-radius: 2px;
+  }
+.section-title.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.container {
+  max-width: 1200px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --section-py: 3rem;
+  }
+
+  .display-5 {
+    font-size: 2rem !important;
+  }
+
+  .lead {
+    font-size: 1.1rem !important;
+  }
+}
