@@ -4,54 +4,12 @@
   "description": "A website for SMK Kahuripan 1 Jakarta, showcasing school information and resources.",
   "main": "src/index.js",
   "scripts": {
-    "clean": "rmdir /s /q dist && mkdir dist",
-    "init:folders": "mkdir src\\postcss\\components 2>nul && mkdir src\\postcss\\utilities 2>nul && mkdir dist\\css 2>nul && mkdir dist\\js 2>nul",
-    "copy:bootstrap": "if exist node_modules\\bootstrap\\scss xcopy node_modules\\bootstrap\\scss src\\postcss\\bootstrap /E /I /Y",
-    "setup": "npm run init:folders && npm run copy:bootstrap",
-    "css:dev": "postcss src/postcss/main.pcss -o dist/css/main.css",
-    "css:watch": "postcss src/postcss/main.pcss -o dist/css/main.css -w",
-    "css:build": "set NODE_ENV=production && postcss src/postcss/main.pcss -o dist/css/main.min.css",
-    "dev": "npm-run-all setup css:watch",
-    "build": "npm-run-all clean init:folders copy:bootstrap css:build",
-    "start": "npm run dev"
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
   },
-  "author": "SMK Kahuripan",
+  "author": "Your Name",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dioaraya1/Web-Kahuripan1-bootstrap.git"
-  },
-  "keywords": [
-    "smk",
-    "kahuripan1",
-    "jakarta",
-    "website",
-    "sekolah"
-  ],
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/dioaraya1/Web-Kahuripan1-bootstrap/issues"
-  },
-  "homepage": "https://github.com/dioaraya1/Web-Kahuripan1-bootstrap#readme",
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^7.0.2",
-    "autoprefixer": "^10.4.23",
-    "bootstrap": "^5.3.0",
-    "bootstrap-icons": "^1.13.1",
-    "cross-env": "^10.1.0",
-    "cssnano": "^7.1.2",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1",
-    "postcss-import": "^16.1.1",
-    "postcss-mixins": "^12.1.2",
-    "postcss-nested": "^7.0.2",
-    "postcss-preset-env": "^9.1.1"
-  },
-  "browserslist": [
-    "> 0.5% in ID",
-    "last 2 versions",
-    "not dead",
-    "not IE 11"
-  ]
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
