@@ -1,4 +1,8 @@
+[build]
+  command = "your-build-command"
+  publish = "your-publish-folder"
+
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/src/pages/index.html"
   status = 200
