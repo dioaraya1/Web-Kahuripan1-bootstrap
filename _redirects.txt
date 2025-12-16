@@ -1,3 +1,4 @@
-/              /pages/index.html     200
-/*              /pages/index.html     200
+/              /src/pages/index.html     200
+/*              /src/pages/index.html     200
+
 
