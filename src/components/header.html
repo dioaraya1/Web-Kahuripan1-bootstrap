@@ -1,50 +1,64 @@
-<!-- Header -->
-<header class="shadow-sm">
-  <!-- Top Header -->
-  <div class="top-header bg-white border-bottom py-2">
-    <div
-      class="container d-flex flex-wrap justify-content-between align-items-center"
-    >
-      <div class="d-flex align-items-center">
-        <img
-          src="../assets/img/logo.png"
-          alt="SMK Kahuripan 1 Logo"
-          width="60"
-          height="60"
-          class="me-3"
-        />
-        <div>
-          <h5 class="mb-0 fw-bold text-primary">SMK Kahuripan 1 Jakarta</h5>
-          <small class="text-muted"
-            >Meningkatkan kualitas sumber daya manusia melalui pendidikan
-            vokasi</small
-          >
+<!-- Header Simple & Clean -->
+<header class="sticky-top shadow-sm bg-white">
+  <!-- Top Header Minimal -->
+  <div class="top-header border-bottom py-2">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- Logo & School Name -->
+        <div class="d-flex align-items-center">
+          <div class="logo-wrapper me-3">
+            <img
+              src="../assets/image/logo.png"
+              alt="SMK Kahuripan 1 Logo"
+              width="55"
+              height="55"
+              class="logo"
+            />
+          </div>
+          <div>
+            <h5 class="mb-0 fw-bold text-primary">SMK Kahuripan 1 Jakarta</h5>
+            <p class="text-muted mb-0 small">
+              Menciptakan Lulusan Siap Kerja dan Berkarakter
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="d-none d-md-flex align-items-center gap-3">
-        <div class="text-muted small d-flex align-items-center">
-          <i class="bi bi-telephone me-1 text-primary"></i> (021) 123456
-        </div>
-        <div class="text-muted small d-flex align-items-center">
-          <i class="bi bi-envelope me-1 text-primary"></i>
-          info@smkkahuripan1.sch.id
+
+        <!-- Contact Info Minimal -->
+        <div class="d-none d-md-flex align-items-center gap-4">
+          <div class="text-center">
+            <div class="d-flex align-items-center text-primary">
+              <i class="bi bi-telephone me-2"></i>
+              <a
+                href="tel:+62217810801"
+                class="text-decoration-none text-dark fw-medium"
+              >
+                (021) 7810801
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <div class="d-flex align-items-center text-primary">
+              <i class="bi bi-envelope me-2"></i>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=smk.kahuripan.1@gmail.com&su=Informasi Pendaftaran&body=Halo, saya ingin bertanya tentang..."
+                class="text-decoration-none text-dark fw-medium"
+              >
+                Email Kami
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Main Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-2">
+  <!-- Navigation Clean -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
     <div class="container">
-      <a
-        class="navbar-brand fw-semibold d-lg-none"
-        href="#"
-      >
-        <i class="bi bi-mortarboard-fill me-1"></i> SMK Kahuripan 1
-      </a>
-
+      <!-- Mobile Toggle -->
       <button
-        class="navbar-toggler"
+        class="navbar-toggler ms-auto border-0"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#mainNavbar"
@@ -59,99 +73,191 @@
         class="collapse navbar-collapse"
         id="mainNavbar"
       >
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Navigation Menu Center -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a
-              class="nav-link active"
-              href="index.html"
-              >Beranda</a
+              class="nav-link px-3"
+              href="#header"
             >
+              Beranda
+            </a>
           </li>
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link px-3"
               href="#sejarah"
-              >Profil</a
             >
+              Profil
+            </a>
           </li>
+
+          <!-- Jurusan Dropdown Simple -->
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle px-3"
               href="#jurusan"
               id="jurusanDropdown"
               role="button"
               data-bs-toggle="dropdown"
-              aria-expanded="false"
+              aria-expanded
             >
               Jurusan
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu border-0 shadow-sm">
               <li>
                 <a
                   class="dropdown-item"
                   href="#jurusan"
-                  >Permesinan</a
                 >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="#jurusan"
-                  >Teknik Otomotif</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="#jurusan"
-                  >Teknik Komputer & Jaringan</a
-                >
+                  Teknik Kendaraan Ringan
+                </a>
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link px-3"
+              href="#berita"
+            >
+              Berita
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link px-3"
               href="#fasilitas"
-              >Fasilitas</a
             >
+              Fasilitas
+            </a>
           </li>
           <li class="nav-item">
             <a
-              class="nav-link"
-              href="admission.html"
-              >Pendaftaran</a
+              class="nav-link px-3 fw-bold"
+              href="#pendaftaran"
             >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="contact.html"
-              >Kontak</a
-            >
+              Pendaftaran
+            </a>
           </li>
         </ul>
 
-        <!-- Social Media -->
-        <div class="d-flex gap-2">
+        <!-- Social Icons Minimal -->
+        <div class="d-none d-lg-flex align-items-center">
           <a
-            href="https://instagram.com/smkkahuripan1"
+            href="mailto:smk.kahuripan.1@gmail.com"
             target="_blank"
-            class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 35px; height: 35px"
+            class="btn btn-sm btn-outline-light me-2"
+            title="Kirim Email"
           >
-            <i class="bi bi-instagram text-primary"></i>
+            <i class="bi bi-envelope"></i>
           </a>
           <a
-            href="https://facebook.com/smkkahuripan1"
-            target="_blank"
-            class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 35px; height: 35px"
+            href="#"
+            class="btn btn-sm btn-outline-light"
+            title="Facebook"
           >
-            <i class="bi bi-facebook text-primary"></i>
+            <i class="bi bi-facebook"></i>
           </a>
         </div>
       </div>
     </div>
   </nav>
 </header>
+
+<!-- CSS Minimal -->
+<style>
+  /* Logo Styling */
+  .logo-wrapper {
+    padding: 4px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    border-radius: 8px;
+  }
+
+  /* Navigation Links */
+  .nav-link {
+    position: relative;
+    padding: 1rem 1.5rem !important;
+    transition: all 0.2s ease;
+  }
+
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 70%;
+  }
+
+  /* Dropdown Styling */
+  .dropdown-menu {
+    border-radius: 8px;
+    min-width: 200px;
+  }
+
+  .dropdown-item {
+    padding: 0.6rem 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .dropdown-item:hover {
+    background: #f8f9fa;
+    padding-left: 1.2rem;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 991.98px) {
+    .navbar-nav {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .nav-link {
+      padding: 0.8rem !important;
+    }
+
+    .dropdown-menu {
+      text-align: center;
+      border: none;
+      box-shadow: none;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .social-icons {
+      justify-content: center;
+      padding: 1rem 0;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .logo-wrapper {
+      margin-right: 10px;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+    }
+
+    .text-muted {
+      font-size: 0.8rem;
+    }
+  }
+</style>
