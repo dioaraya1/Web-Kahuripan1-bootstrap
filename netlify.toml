@@ -1,9 +1,18 @@
 [build]
-  # Jika index.html ada di src/pages, jadikan itu root publish
-  publish = "src/pages"
-  # command = ""  # kosongkan jika tidak perlu build
+  publish = "."  # Root adalah folder src/pages
+  
+[[redirects]]
+  from = "/components/*"
+  to = "/src/components/:splat"
+  status = 200
+  
+[[redirects]]
+  from = "/assets/*"
+  to = "/src/assets/:splat"
+  status = 200
 
+# SPA fallback
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/src/pages/index.html"
   status = 200
