@@ -1,8 +1,9 @@
 [build]
-  command = "your-build-command"
-  publish = "your-publish-folder"
+  # Jika index.html ada di src/pages, jadikan itu root publish
+  publish = "src/pages"
+  # command = ""  # kosongkan jika tidak perlu build
 
 [[redirects]]
   from = "/*"
-  to = "/src/pages/index.html"
+  to = "/index.html"
   status = 200
