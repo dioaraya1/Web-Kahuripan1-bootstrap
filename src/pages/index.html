@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -215,7 +215,7 @@
                     <div
                       class="headmaster-photo-fixed"
                       style="
-                        background-image: url('../assets/image/kepsek.jpg');
+                        background-image: url(&quot;../assets/image/kepsek.jpg&quot;);
                       "
                     ></div>
 
@@ -435,100 +435,6 @@
     </section>
 
     <!-- VISI & MISI -->
-    <section
-      id="visi-misi"
-      class="py-5 bg-white"
-    >
-      <div class="container">
-        <div
-          class="text-center mb-5"
-          data-aos="fade-up"
-        >
-          <h2 class="fw-bold text-primary">Visi & Misi</h2>
-          <p class="text-muted">
-            Menjadi SMK unggulan yang mencetak generasi siap kerja, unggul, dan
-            berkarakter
-          </p>
-          <div
-            class="mx-auto"
-            style="
-              width: 80px;
-              height: 3px;
-              background-color: var(--bs-primary);
-              border-radius: 5px;
-            "
-          ></div>
-        </div>
-
-        <div class="row g-5 align-items-start">
-          <!-- Visi -->
-          <div
-            class="col-md-5"
-            data-aos="fade-right"
-          >
-            <div class="card border-0 shadow-sm rounded-4 h-100 p-4">
-              <div class="d-flex align-items-center mb-3">
-                <div
-                  class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 45px; height: 45px"
-                >
-                  <i class="bi bi-eye fs-5"></i>
-                </div>
-                <h5 class="fw-bold mb-0 text-primary">Visi Sekolah</h5>
-              </div>
-              <p class="text-muted mb-0">
-                Menjadi lembaga pendidikan kejuruan yang unggul dalam teknologi,
-                disiplin, dan berakhlak mulia, guna menghasilkan lulusan yang
-                siap bersaing di dunia kerja dan berjiwa wirausaha.
-              </p>
-            </div>
-          </div>
-
-          <!-- Misi -->
-          <div
-            class="col-md-7"
-            data-aos="fade-left"
-          >
-            <div class="card border-0 shadow-sm rounded-4 h-100 p-4">
-              <div class="d-flex align-items-center mb-3">
-                <div
-                  class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 45px; height: 45px"
-                >
-                  <i class="bi bi-bullseye fs-5"></i>
-                </div>
-                <h5 class="fw-bold mb-0 text-warning">Misi Sekolah</h5>
-              </div>
-              <ul class="list-unstyled text-muted">
-                <li class="mb-2">
-                  <i class="bi bi-check-circle text-success me-2"></i>
-                  Menyelenggarakan pendidikan berkualitas berbasis kompetensi
-                  industri.
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check-circle text-success me-2"></i>
-                  Mengembangkan karakter disiplin, kerja keras, dan tanggung
-                  jawab.
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check-circle text-success me-2"></i> Menjalin
-                  kemitraan dengan dunia usaha dan dunia industri (DUDI).
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check-circle text-success me-2"></i>
-                  Meningkatkan kompetensi guru dan tenaga kependidikan secara
-                  berkelanjutan.
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check-circle text-success me-2"></i> Mendorong
-                  siswa berinovasi dan berwirausaha di bidangnya.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Detail Jurusan Teknik Kendaraan Ringan -->
     <section
@@ -1783,7 +1689,7 @@
             interval: 5000,
             wrap: true,
             pause: "hover",
-          }
+          },
         );
 
         // Add active class to thumbnail on click
@@ -1800,7 +1706,7 @@
 
             // Also update main image (you can add this functionality)
             const mainImg = slideContainer.querySelector(
-              ".carousel-img-container img"
+              ".carousel-img-container img",
             );
             mainImg.src = this.src;
             mainImg.alt = this.alt;
